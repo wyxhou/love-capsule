@@ -12,12 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
     env.addEventListener("click", () => {
       const text = env.querySelector("p");
       const span = env.querySelector("span");
+
       text.style.display = "block";
       span.style.display = "none";
     });
   });
 
-  // running NO button (kept inside section)
+  // running NO button
   const noBtn = document.getElementById("noBtn");
   const container = document.querySelector(".buttons");
 
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (i < text.length) {
       document.getElementById("typeText").innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 45);
+      setTimeout(typeWriter, 42);
     }
   }
 
