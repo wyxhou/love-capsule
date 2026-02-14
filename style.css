@@ -1,9 +1,22 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+  background: radial-gradient(circle at top, #ffe6f0, #fff0f6 40%, #fff);
   text-align: center;
   overflow-x: hidden;
+  color: #3a3a3a;
+}
+
+/* soft background glow */
+.glow {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,77,136,0.25), transparent 70%);
+  top: -150px;
+  right: -150px;
+  filter: blur(60px);
+  z-index: -1;
 }
 
 /* HERO */
@@ -13,104 +26,124 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  color: #ff4d88;
+  gap: 28px;
   padding: 0 20px;
 }
 
-/* BUTTON */
-button {
-  padding: 12px 24px;
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.7rem;
+  color: #ff4d88;
+  max-width: 700px;
+  line-height: 1.3;
+}
+
+/* PREMIUM BUTTON */
+.primary-btn {
+  padding: 14px 30px;
   border: none;
-  border-radius: 25px;
-  background: #ff4d88;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff4d88, #ff7aa8);
   color: white;
   font-size: 1rem;
   cursor: pointer;
-  transition: 0.25s;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(255,77,136,0.35);
 }
 
-button:hover {
-  transform: scale(1.05);
+.primary-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 14px 35px rgba(255,77,136,0.45);
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ff4d88;
 }
 
 /* REASONS */
 .reasons {
-  padding: 80px 20px;
+  padding: 110px 20px;
 }
 
 .envelope-grid {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 28px;
   flex-wrap: wrap;
 }
 
+/* GLASS CARDS */
 .envelope {
-  width: 160px;
-  height: 130px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  width: 190px;
+  min-height: 150px;
+  backdrop-filter: blur(14px);
+  background: rgba(255,255,255,0.6);
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 20px 45px rgba(255,77,136,0.12);
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  padding: 12px;
-  transition: 0.25s;
+  padding: 18px;
+  transition: all 0.28s ease;
 }
 
 .envelope:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 30px 60px rgba(255,77,136,0.18);
+}
+
+.envelope span {
+  font-size: 0.9rem;
+  color: #ff4d88;
+  font-weight: 500;
 }
 
 .hidden {
   display: none;
-  font-size: 0.9rem;
-  margin-top: 6px;
-}
-
-/* GALLERY */
-.gallery {
-  padding: 80px 20px;
-}
-
-.photos {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.photos img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 14px;
-  transform: rotate(-2deg);
-  transition: 0.3s;
-}
-
-.photos img:hover {
-  transform: rotate(0deg) scale(1.06);
+  font-size: 0.95rem;
+  margin-top: 8px;
+  line-height: 1.4;
 }
 
 /* FINAL */
 .final {
-  padding: 100px 20px;
-  position: relative;
+  padding: 120px 20px;
+}
+
+.final-text {
+  font-family: "Playfair Display", serif;
+  font-size: 2.3rem;
+  color: #ff4d88;
+  margin-bottom: 30px;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
   position: relative;
-  height: 80px;
+  height: 90px;
+}
+
+/* NO BUTTON */
+.no {
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 2px solid #ff4d88;
+  background: white;
+  color: #ff4d88;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.no:hover {
+  background: #fff0f5;
 }
 
 /* FLOATING HEARTS */
@@ -121,12 +154,23 @@ button:hover {
   left: 0;
   width: 100%;
   font-size: 24px;
-  animation: floatHearts 12s linear infinite;
-  opacity: 0.35;
+  animation: floatHearts 14s linear infinite;
+  opacity: 0.28;
   pointer-events: none;
 }
 
 @keyframes floatHearts {
   0% { transform: translateY(0); }
   100% { transform: translateY(110vh); }
+}
+
+/* MOBILE POLISH */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .final-text {
+    font-size: 1.8rem;
+  }
 }
