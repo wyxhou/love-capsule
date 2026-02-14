@@ -4,17 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Love Capsule 💌</title>
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- floating hearts -->
   <div class="hearts"></div>
 
   <!-- HERO -->
   <section class="hero">
     <h1 id="typeText"></h1>
-    <button onclick="scrollToSection()">Open the capsule 💗</button>
+    <button id="openBtn">Open the capsule 💗</button>
   </section>
 
   <!-- REASONS -->
@@ -22,17 +28,17 @@
     <h2>Reasons I Love You 💌</h2>
     <div class="envelope-grid">
 
-      <div class="envelope" onclick="reveal(this)">
+      <div class="envelope">
         <span>Click me</span>
         <p class="hidden">The way you make ordinary days special ✨</p>
       </div>
 
-      <div class="envelope" onclick="reveal(this)">
+      <div class="envelope">
         <span>Click me</span>
         <p class="hidden">Your late night random thoughts 🌙</p>
       </div>
 
-      <div class="envelope" onclick="reveal(this)">
+      <div class="envelope">
         <span>Click me</span>
         <p class="hidden">How safe I feel with you 💗</p>
       </div>
@@ -44,9 +50,9 @@
   <section class="gallery">
     <h2>Our Memories 🖼️</h2>
     <div class="photos">
-      <img src="https://picsum.photos/200?1" />
-      <img src="https://picsum.photos/200?2" />
-      <img src="https://picsum.photos/200?3" />
+      <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=60" alt="memory">
+      <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=500&auto=format&fit=crop&q=60" alt="memory">
+      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=500&auto=format&fit=crop&q=60" alt="memory">
     </div>
   </section>
 
