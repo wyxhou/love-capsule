@@ -12,14 +12,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
 .hero h1 {
   font-size: 2.5rem;
   color: #ff4d88;
+  padding: 0 20px;
 }
 
+/* BUTTON */
 button {
   padding: 12px 24px;
   border: none;
@@ -28,7 +31,7 @@ button {
   color: white;
   font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
 button:hover {
@@ -48,21 +51,27 @@ button:hover {
 }
 
 .envelope {
-  width: 150px;
-  height: 120px;
+  width: 160px;
+  height: 130px;
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  padding: 10px;
+  padding: 12px;
+  transition: 0.25s;
+}
+
+.envelope:hover {
+  transform: translateY(-4px);
 }
 
 .hidden {
   display: none;
   font-size: 0.9rem;
+  margin-top: 6px;
 }
 
 /* GALLERY */
@@ -79,24 +88,29 @@ button:hover {
 
 .photos img {
   width: 200px;
-  border-radius: 12px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
   transform: rotate(-2deg);
   transition: 0.3s;
 }
 
 .photos img:hover {
-  transform: rotate(0deg) scale(1.05);
+  transform: rotate(0deg) scale(1.06);
 }
 
 /* FINAL */
 .final {
   padding: 100px 20px;
+  position: relative;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
+  position: relative;
+  height: 80px;
 }
 
 /* FLOATING HEARTS */
@@ -108,7 +122,8 @@ button:hover {
   width: 100%;
   font-size: 24px;
   animation: floatHearts 12s linear infinite;
-  opacity: 0.4;
+  opacity: 0.35;
+  pointer-events: none;
 }
 
 @keyframes floatHearts {
